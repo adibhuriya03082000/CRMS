@@ -1,0 +1,60 @@
+<div class="signup-container">
+    <div class="signup-form">
+      <h2>Create Account</h2>
+  
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <div class="form-group">
+          <label for="firstname">Firstname</label>
+          <input type="text" id="firstname" class="form-control" placeholder="Enter your firstname" ngModel name="firstname" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="lastname">Lastname</label>
+          <input type="text" id="lastname" class="form-control" placeholder="Enter your lastname" ngModel name="lastname" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" class="form-control" placeholder="Enter your username" ngModel name="username" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" ngModel name="email" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" class="form-control" ngModel name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="admin">HR</option>
+            <option value="user">IT</option>
+            <option value="guest">Account</option>
+            <option value="guest">Sale</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" class="form-control" placeholder="Enter your address" ngModel name="address" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" class="form-control" ngModel name="dob" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="mobile">Mobile No.</label>
+          <input type="number" id="mobile" class="form-control" placeholder="Enter your mobile number" ngModel name="mobile" required>
+        </div>
+  
+        <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Sign Up</button>
+      </form>
+  
+      <p class="redirect-login">
+        Already have an account? <a [routerLink]="['/login']">Login</a>
+      </p>
+    </div>
+  </div>
+  

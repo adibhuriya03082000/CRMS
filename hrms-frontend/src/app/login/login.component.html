@@ -1,0 +1,25 @@
+<div class="container-fluid vh-100 d-flex justify-content-center align-items-center" style="background-color: #e9f0ff;">
+  <div class="row w-75">
+    <!-- Left side (Login form) -->
+    <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-5" style="background-color: white; border-radius: 15px 0 0 15px;">
+      <h3>Welcome Back</h3>
+      <form class="w-100 mt-4">
+        <div class="form-group mb-3">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+      <p class="mt-4">Don't have an account? <a  [routerLink]="['/signup']">Sign up</a></p>
+    </div>
+
+    <!-- Right side (Image/Info) -->
+    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" style="background-color: #f7f9ff; border-radius: 0 15px 15px 0;">
+      <img src="D:/angular/hrms-frontend/src/assets/login.png" alt="Illustration of login" class="img-fluid mb-3" style="max-width: 80%;">
+    </div>
+  </div>
+</div>
